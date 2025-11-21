@@ -1,0 +1,6 @@
+*.i
+*.o
+*.s
+*.sh
+a.out
+cmdcalc
