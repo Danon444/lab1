@@ -56,7 +56,7 @@ char *program(int argc,char *argv[])
         exit(1);
     }
     int key=-1;
-    for (unsigned r = 1; r < argc; r++)
+    for (int r = 1; r < argc; r++)
     {
         if (argv[r][0] == '-')
         {
@@ -83,8 +83,8 @@ char *program(int argc,char *argv[])
     }
     int keyValue=atoi(argv[key+1]);
     int *resultmass = calloc((key-1)/3,sizeof(int));
-    unsigned index = 0;
-    for (unsigned i=1;i<argc-3;i+=3)
+    int index = 0;
+    for (int i=1;i<argc-3;i+=3)
     {
         if (isnumber(argv[i])==0)
         {
@@ -108,7 +108,7 @@ char *program(int argc,char *argv[])
         }
     }
     char *resultstr=malloc((key-1)/3+1);
-    for (unsigned j=0;j<((key-1)/3);j++)
+    for (int j=0;j<((key-1)/3);j++)
     {
         resultstr[j]=(char)(resultmass[j]-keyValue);
     }
