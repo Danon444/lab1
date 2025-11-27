@@ -3,4 +3,4 @@
 *.s
 *.sh
 a.out
-cmdcalc
+main
